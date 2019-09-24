@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#mybg {background-image:url(bg.jpg); width:1536px; height: 800px; position: relative;}
+		#buta {background-color: black; color: white; }
+		#butb {opacity: 0; }
+		.tit {display: block; margin: 0 auto; width: 450px; height: 250px; text-align: center; padding-top: 550px;}
+		#txt {font-size: 35px; font-weight: bolder;  background-color: black; color: white;}
+		#z2 {opacity: 0; width:670px; position: absolute; top:20px; right: 40px;z-index: 2; display: block; margin: 0 auto;}
+		#z3 {opacity: 0; width:300px; position: absolute; top:330px; right: 270px; z-index: 2;}
+		#z4 {opacity: 0; width:390px; position: absolute; top:30px; right: 650px; z-index: 2;}
+		#z7 {opacity: 0; width:280px; position: absolute; top:5px; left: 50px; z-index: 2;}
+		#z8 {opacity: 0; width:300px; position: absolute; top:5px; left: 420px; z-index: 2; animation: ro 10s infinite ease; }
+
+		@keyframes ro{
+			to{ transform: rotate3D(1,0.5,0.5,360deg);}
+		}
+
+	</style>
+</head>
+<body id="mybody">
+	<div id="mybg">
+		<div class="tit">
+			<p id="txt">이봐, 내 초밥을 먹어보겠나?</p>
+			<input type="button" id="buta" value="네!" onclick="alert('아');">
+			<input type="button" id="butno" value="아니요." onclick="alert('그런일은 있을 수 없지.')">
+		</div>
+	</div>
+	<img src="2.gif" id="z2">
+	<img src="3.gif" id="z3">
+	<img src="7.gif" id="z7">
+	<img src="8.png" id="z8">
+	<audio id="dog">
+		<source src="dog.mp3" type="audio/mp3">
+	</audio>
+	<script type="text/javascript">
+		buta.onclick = function () {
+			buta.style.opacity = "0"; 
+			butno.style.opacity = "0";
+			mybg.style.opacity = "0";
+			dog.play();
+			mybody.style.background = "url('1_.gif')";
+			z2.style.opacity = "1";
+			z3.style.opacity = "1";
+			z7.style.opacity = "1";
+			z8.style.opacity = "1";
+
+
+			
+		}
+	</script>
+</body>
+</html>
